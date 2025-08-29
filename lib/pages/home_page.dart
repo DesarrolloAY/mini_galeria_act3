@@ -42,7 +42,10 @@ class _HomePageState extends State<HomePage> {
               MaterialPageRoute(builder: (context) => ImagePage(url: image)),
             );
           },
-          child: Image.network(image, fit: BoxFit.cover),
+          child: Hero(
+            tag: image,
+            child: Image.network(image, fit: BoxFit.cover),
+          ),
         ),
       );
     }

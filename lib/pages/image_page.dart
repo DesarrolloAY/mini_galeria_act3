@@ -19,7 +19,7 @@ class ImagePage extends StatelessWidget {
               },
               icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
             ),
-            Image.network(url),
+            Hero(tag: url, child: Image.network(url)),
             const Divider(),
           ],
         ),
