@@ -21,6 +21,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: GridView.extent(
         maxCrossAxisExtent: 150.0, //cuanto maximo mide un elemento en pantalla
+        padding: const EdgeInsets.all(5.0),
+        mainAxisSpacing: 5.0, //separacion entre elemento
+        crossAxisSpacing: 5.0,
         children: _imageslist,
       ),
     );
@@ -30,7 +33,7 @@ class _HomePageState extends State<HomePage> {
     List<Widget> _listImages = [];
 
     for (var image in images) {
-      _listImages.add(Image.network(image));
+      _listImages.add(Image.network(image, fit: BoxFit.cover));
     }
 
     return _listImages;
