@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_galeria_act3/data/images_data.dart';
+import 'package:mini_galeria_act3/pages/images_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,7 +34,17 @@ class _HomePageState extends State<HomePage> {
     List<Widget> _listImages = [];
 
     for (var image in images) {
-      _listImages.add(Image.network(image, fit: BoxFit.cover));
+      _listImages.add(
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ImagePage(url: image)),
+            );
+          },
+          child: Image.network(image, fit: BoxFit.cover),
+        ),
+      );
     }
 
     return _listImages;
