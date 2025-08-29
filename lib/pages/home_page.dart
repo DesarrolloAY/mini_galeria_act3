@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mini_galeria_act3/data/images_data.dart';
-import 'package:mini_galeria_act3/pages/images_page.dart';
+import 'package:mini_galeria_act3/pages/image_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
